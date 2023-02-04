@@ -1,12 +1,12 @@
 <PongBall>:
-    size: 50, 50 
+    size: 30, 30 
     canvas:
         Ellipse:
             pos: self.pos
             size: self.size          
 
 <PongPaddle>:
-    size: 25, 200
+    size: 100, 15
     canvas:
         Rectangle:
             pos: self.pos
@@ -19,8 +19,8 @@
     
     canvas:
         Rectangle:
-            pos: self.center_x - 5, 0
-            size: 10, self.height
+            pos: 0, 400
+            size: 360, 10
     
     Label:
         font_size: 70  
@@ -30,8 +30,8 @@
         
     Label:
         font_size: 70  
-        center_x: root.width * 3 / 4
-        top: root.top - 50
+        center_x: root.width / 4
+        top: root.top - 450
         text: str(root.player2.score)
     
     PongBall:
@@ -40,10 +40,10 @@
         
     PongPaddle:
         id: player_left
-        x: root.x
-        center_y: root.center_y
+        y: root.y
+        center_x: root.center_x
         
     PongPaddle:
         id: player_right
-        x: root.width - self.width
-        center_y: root.center_y
+        y: 785
+        center_x: root.center_x
